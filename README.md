@@ -2,21 +2,96 @@
 
 ![](https://img.shields.io/github/stars/hsiangfeng/README-Example-Template.svg)｜![](https://img.shields.io/github/forks/hsiangfeng/README-Example-Template.svg)｜![](https://img.shields.io/github/issues-pr/hsiangfeng/README-Example-Template.svg)｜![](https://img.shields.io/github/issues/hsiangfeng/README-Example-Template.svg)
 
-> 由於許多人都不知道如何撰寫 README，所以我就提供一個 README 範本，讓大家可以參考，許多地方你都可以斟酌是否要加入，或是修改成你自己的風格。
+> EMU200 Automation Instructions
 
-**ps. 底下範本不是絕對，你可以依照自己需求斟酌增加或刪除。**
 
-# README Template
 
-![專案封面圖](https://fakeimg.pl/500/)
-
-> 此專案是一份 README 的撰寫範本，主要是方便所有人可以快速撰寫 README，讓大家可以更有方向的去寫出 README。
+> This is an instruction that direct users to install automation testing software on their devices.。
 
 - [線上觀看連結](https://israynotarray.com/)
 
-## 功能
+## Prerequisites
+Node.js 18+
 
-測試帳號密碼 **（請斟酌提供，建議只提供僅能觀看不能操作的帳號密碼）**
+npm 9.6+
+
+Windows 10+, Windows Server 2016+ or Windows Subsystem for Linux (WSL).
+
+MacOS 12 Monterey, MacOS 13 Ventura, or MacOS 14 Sonoma.
+
+Debian 11, Debian 12, Ubuntu 20.04 or Ubuntu 22.04, with x86-64 or arm64 architecture.
+
+Python 2.7 or above. The tutorial of installing Python with Visual Studio Code (https://code.visualstudio.com/docs/python/python-tutorial).
+
+
+
+
+
+## Installation in Visual Studio Code
+
+> Follow the instructions to install this automation test properly on your device.
+
+
+### Get the project
+
+```bash
+git clone git@github.com
+```
+### Install Node.js
+```bash
+Need to install the following packages:
+create-playwright@1.17.132
+Ok to proceed? (y) y
+Getting started with writing end-to-end tests with Playwright:
+Initializing project in '.'
+√ Do you want to use TypeScript or JavaScript? · JavaScript
+√ Where to put your end-to-end tests? · tests
+√ Add a GitHub Actions workflow? (y/N) · false
+√ Install Playwright browsers (can be done manually via 'npx playwright install')? (Y/n) · true
+Initializing NPM project (npm init -y)…
+Wrote to C:\Users\a0976\emu\package.json:
+
+{
+  "name": "emu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+
+```
+Installing Playwright Test (npm install --save-dev @playwright/test)…
+
+### Install Playwright Packages
+
+```bash
+npm init playwright@latest
+```
+
+### Check the validity 
+
+請在終端機輸入 `cp .env.example .env` 來複製 .env.example 檔案，並依據 `.env` 內容調整相關欄位。
+
+### Run the project approach 1
+
+```bash
+npm playw
+```
+
+### Test Result
+
+在瀏覽器網址列輸入以下即可看到畫面
+
+```bash
+http://localhost:8080/
+```
+
+### Environment variables (Dotenv)
 
 ```bash
 帳號： example@example.com
@@ -28,57 +103,8 @@
 - [x] 產品列表
 ...
 
-## 畫面
 
-> 可提供 1~3 張圖片，讓觀看者透過 README 了解整體畫面
 
-![範例圖片 1](https://fakeimg.pl/500/)
-![範例圖片 2](https://fakeimg.pl/500/)
-![範例圖片 3](https://fakeimg.pl/500/)
-
-## 安裝
-
-> 請務必依據你的專案來調整內容。
-
-以下將會引導你如何安裝此專案到你的電腦上。
-
-Node.js 版本建議為：`16.15.0` 以上...
-
-### 取得專案
-
-```bash
-git clone git@github.com:hsiangfeng/README-Example-Template.git
-```
-
-### 移動到專案內
-
-```bash
-cd README-Example-Template
-```
-
-### 安裝套件
-
-```bash
-npm install
-```
-
-### 環境變數設定
-
-請在終端機輸入 `cp .env.example .env` 來複製 .env.example 檔案，並依據 `.env` 內容調整相關欄位。
-
-### 運行專案
-
-```bash
-npm run serve
-```
-
-### 開啟專案
-
-在瀏覽器網址列輸入以下即可看到畫面
-
-```bash
-http://localhost:8080/
-```
 
 ## 環境變數說明
 
